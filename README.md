@@ -5,13 +5,14 @@
 This repository contains the implementation for the four main assignment components:
 
 - Q1: merged-token segmentation, POS tagging, and trigram-based beam decoding
-- Q2: dependency parsing / dependency structure visualization
+- Q2: dependency parsing and dependency-structure visualization
 - Q3: spelling correction using vocabulary and language-model heuristics
 - Q4: integrated live typing pipeline, grammar alerts, PCFG parsing, and final sentence scoring
 
 The project is structured to keep training-time code separate from runtime inference code and to reuse trained artifacts instead of retraining during Q4.
 
 ---
+## Group Number: 10
 
 ## Question 1 — Segmentation + POS Tagging + Beam Decoder
 
@@ -62,25 +63,42 @@ Key parameter choices:
 
 ## Quick start
 
-### 1) Install dependencies
+### 1) Create and activate a Python environment
 
 ```bash
-pip install nltk pandas streamlit spacy
+python -m venv .venv
+source .venv/bin/activate
+```
+
+### 2) Install dependencies
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install nltk pandas streamlit spacy
 python -m spacy download en_core_web_sm
 ```
 
-### 2) Run the Streamlit app
+### 3) Download required NLTK datasets
+
+```bash
+python - <<'PY'
+import nltk
+nltk.download('brown')
+nltk.download('treebank')
+nltk.download('punkt')
+PY
+```
+
+### 4) Run the Streamlit app
 
 ```bash
 streamlit run app.py
 ```
 
-### 3) Run the benchmark
+### 5) Run the benchmark
 
 ```bash
 python speed_demon.py
-```
-
 ```
 
 ---
@@ -89,20 +107,20 @@ python speed_demon.py
 
 ```text
 .
-├── app.py                     # Streamlit app for live typing + final analysis
-├── final_analysis.py          # Sentence scoring and final verdict logic
-├── live_pipeline.py           # Live segmentation + spell + grammar check pipeline
-├── q1_module.py               # Reusable Q1 runtime module
-├── q1_train.py                # Q1 training logic (offline)
-├── q2_dependency_parser2.py   # Dependency parser implementation
-├── q3_module.py               # Reusable Q3 spelling correction module
-├── q3_train.py                # Q3 training logic (offline)
-├── shared_lm.py               # Shared Brown bigram/trigram LM
-├── q4_pcfg_parser.py          # PCFG parser + tag reconciliation
-├── speed_demon.py             # Benchmark script for latency comparisons
-├── render_dependency_trees.py # Dependency tree generation
-├── README.md                 # Project overview and usage instructions
-├── AssignmentReport_NLPA1_G10.pdf #Assignment Report
+├── app.py                        # Streamlit app for live typing + final analysis
+├── final_analysis.py             # Sentence scoring and final verdict logic
+├── live_pipeline.py              # Real-time segmentation + spell + grammar checks
+├── q1_module.py                  # Reusable Q1 runtime module
+├── q1_train.py                   # Q1 training logic (offline)
+├── q2_dependency_parser2.py      # Dependency parser implementation
+├── q3_module.py                  # Reusable Q3 spelling correction module
+├── q3_train.py                   # Q3 training logic (offline)
+├── shared_lm.py                  # Shared Brown bigram/trigram LM
+├── q4_pcfg_parser.py             # PCFG parser and tag reconciliation
+├── speed_demon.py                # Benchmark script for latency comparisons
+├── render_dependency_trees.py    # Dependency-tree screenshot generator
+├── README.md                    # Project overview and usage instructions
+├── AssignmentReport_NLPA1_G10.pdf  # Assignment report
 └── ...
 ```
 
@@ -111,5 +129,5 @@ python speed_demon.py
 ## Notes
 
 - Training code is kept separate from runtime inference code, as required by the assignment.
-- The final analysis prefers PCFG when it is reliable; otherwise it falls back to trigram and then bigram.
-- This README is intentionally short and project-focused; it summarizes the implementation rather than reproducing the full assignment narrative which we;ve put together in the report PDF. 
+- The final analysis prefers the PCFG when it is reliable; otherwise it falls back to trigram and then bigram.
+- This README is intentionally concise and person-focused; it summarizes the implementation rather than reproducing the full assignment narrative which we;ve added to the Report PDF.
