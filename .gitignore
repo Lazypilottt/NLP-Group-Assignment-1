@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+UD_English-EWT/
+UD_Spanish-GSD/
+AssignmentReport_NLPA1_G10_backup.pdf

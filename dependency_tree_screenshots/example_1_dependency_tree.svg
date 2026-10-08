@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="240" viewBox="0 0 800 240" style="background-color: #ffffff; font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif;">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#4A5568" />
+  </marker>
+</defs>
+<text x="70" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">The</text>
+<text x="70" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">DET</text>
+<text x="180" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">cat</text>
+<text x="180" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">NOUN</text>
+<text x="290" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">sat</text>
+<text x="290" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">VERB</text>
+<text x="400" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">on</text>
+<text x="400" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">ADP</text>
+<text x="510" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">the</text>
+<text x="510" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">DET</text>
+<text x="620" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">mat</text>
+<text x="620" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">NOUN</text>
+<text x="730" y="180" text-anchor="middle" font-size="16" font-weight="bold" fill="#1A202C">.</text>
+<text x="730" y="200" text-anchor="middle" font-size="12" font-weight="bold" fill="#718096">PUNCT</text>
+<path d="M 180 160 Q 125.0 107 70 160" fill="none" stroke="#4A5568" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="101.0" y="113.8" width="48" height="14" fill="#ffffff" rx="3"/>
+<text x="125.0" y="124.8" text-anchor="middle" font-size="11" font-weight="600" fill="#2B6CB0">det</text>
+<path d="M 290 160 Q 235.0 107 180 160" fill="none" stroke="#4A5568" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="211.0" y="113.8" width="48" height="14" fill="#ffffff" rx="3"/>
+<text x="235.0" y="124.8" text-anchor="middle" font-size="11" font-weight="600" fill="#2B6CB0">nsubj</text>
+<path d="M 620 160 Q 510.0 89 400 160" fill="none" stroke="#4A5568" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="486.0" y="102.1" width="48" height="14" fill="#ffffff" rx="3"/>
+<text x="510.0" y="113.1" text-anchor="middle" font-size="11" font-weight="600" fill="#2B6CB0">case</text>
+<path d="M 620 160 Q 565.0 107 510 160" fill="none" stroke="#4A5568" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="541.0" y="113.8" width="48" height="14" fill="#ffffff" rx="3"/>
+<text x="565.0" y="124.8" text-anchor="middle" font-size="11" font-weight="600" fill="#2B6CB0">det</text>
+<path d="M 290 160 Q 455.0 71 620 160" fill="none" stroke="#4A5568" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="431.0" y="90.4" width="48" height="14" fill="#ffffff" rx="3"/>
+<text x="455.0" y="101.4" text-anchor="middle" font-size="11" font-weight="600" fill="#2B6CB0">obl</text>
+<path d="M 290 160 Q 510.0 65 730 160" fill="none" stroke="#4A5568" stroke-width="1.6" marker-end="url(#arrow)" />
+<rect x="486.0" y="86.5" width="48" height="14" fill="#ffffff" rx="3"/>
+<text x="510.0" y="97.5" text-anchor="middle" font-size="11" font-weight="600" fill="#2B6CB0">punct</text>
+</svg>
